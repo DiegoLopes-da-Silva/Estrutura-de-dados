@@ -3,7 +3,7 @@ class Animal{
         this.nome = nome;
     }
 
-    falar(){
+    Falar(){
         console.log("O animal diz...");
     }
     

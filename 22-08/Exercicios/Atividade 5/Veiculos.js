@@ -1,37 +1,46 @@
-class Carro {
-    constructor(modelo, ano, velocidadeC) {
+class Veiculo {
+    constructor(modelo, ano, velocidade) {
         this.modelo = modelo
         this.ano = ano
-        velocidadeC = velocidadeC
+        this.velocidade = velocidade
     }
 
     acelerar(){
-        velocidadeC += 10
-        console.log (`A velocidade do seu carro ${this.modelo} aumentou para ${velocidadeC}`) 
+        console.log (`Tu acelera ai`)
     }
 
     freiar(){
-        this.velocidade -= 5
-        console.log (`A velocidade do seu carro ${this.modelo} caiu para ${velocidadeC}`) 
+        console.log(`Tu freia ai`)
+    }
+
+}
+
+class Carro extends Veiculo {
+
+    acelerar(){
+
+        this.velocidade = this.velocidade + 10
+        console.log (`A velocidade do seu carro ${this.modelo} aumentou para ${this.velocidade}`) 
+    }
+
+    freiar(){
+        this.velocidade = this.velocidade - 5
+        console.log (`A velocidade do seu carro ${this.modelo} caiu para ${this.velocidade}`) 
     }
 }
 
 
-class Moto {
-    constructor(modelo, ano, velocidadeM) {
-        this.modelo = modelo
-        this.ano = ano
-        this.velocidade = velocidadeM
-    }
+class Moto extends Veiculo {
+        
     acelerar(){
-        this.velocidade =+ 15
+        this.velocidade = this.velocidade + 15
         console.log (`A velocidade da sua moto ${this.modelo} aumentou para ${this.velocidade}`)
     }
 
     freiar(){
-        this.velocidade =- 5
+        this.velocidade = this.velocidade - 5
         console.log (`A velocidade da sua moto ${this.modelo} caiu para ${this.velocidade}`)
     }
 }
 
-module.exports = (Carro, Moto)
+module.exports = {Veiculo, Carro, Moto}
