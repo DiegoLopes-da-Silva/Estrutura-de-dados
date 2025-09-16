@@ -1,10 +1,12 @@
+const Endereco = require("./Endereco.js")
+
 class Cliente{
-    constructor(Nome, EnderecoC) {
+    constructor(Nome, Endereco) {
         this.nome = Nome
-        EnderecoC = require("./Endereco.js")
+        this.endereco = Endereco
     }  
     
-    apresentar() {console.log (`Me chamo ${this.nome} , moro na cidade ${this.cidade} da rua ${this.rua} no número ${this.numero}`)
+    apresentar() {console.log (`Me chamo ${this.nome} , moro na cidade ${this.endereco.cidade} da rua ${this.endereco.rua} no número ${this.endereco.numero}`)
     }
 } 
 
