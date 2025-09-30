@@ -11,3 +11,18 @@ console.log (Estudar.obterElemento(0))
 console.log (Estudar.obterElemento(1))
 
 console.log (Estudar.obterElemento(2))
+
+console.log (`A quantidade de tarefas atualmente é de ${Estudar.tamanhoArray()}`)
+
+Estudar.limpar()
+
+Estudar.adicionarTarefa("Biologia")
+Estudar.adicionarTarefa("Física")
+Estudar.adicionarTarefa("Inglês")
+Estudar.adicionarTarefa("Matemática")
+console.log (`A quantidade de tarefas atualmente é de ${Estudar.tamanhoArray()}`)
+console.log (`A ultima tarefa é ${Estudar.obterElemento(1)}`)
+Estudar.remover()
+Estudar.editar(0, "Química")
+// Estudar.obterIndice("Inglês")
+
