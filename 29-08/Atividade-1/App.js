@@ -21,8 +21,10 @@ Estudar.adicionarTarefa("Física")
 Estudar.adicionarTarefa("Inglês")
 Estudar.adicionarTarefa("Matemática")
 console.log (`A quantidade de tarefas atualmente é de ${Estudar.tamanhoArray()}`)
-console.log (`A ultima tarefa é ${Estudar.obterElemento(1)}`)
+Estudar.mostrarItems()
 Estudar.remover()
 Estudar.editar(0, "Química")
-// Estudar.obterIndice("Inglês")
+Estudar.obterIndice("Inglês")
+Estudar.mostrarItems()
+
 

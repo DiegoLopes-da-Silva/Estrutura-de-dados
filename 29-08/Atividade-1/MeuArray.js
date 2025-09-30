@@ -50,19 +50,24 @@ class MeuArray {
         console.log ("A matéria", indice ,"agora é" , valor)
         }
     }
-/*
-    obterIndice(valor) {
-        if (this.#items[this.#tamanho] != valor) {
-            this.#tamanho--
+
+    obterIndice(valor) { 
+        //Percorrendo o array
+        for(let i = 0; i < this.#tamanho; i++){
+            //Verificando se o valor é igual ao elemento
+            if(this.#items[i] == valor){
+                return i; //Retornando o indice
+            }
         }
-        if (this.#items[this.#tamanho] = valor) {
-            return this.#tamanho
-        }
-        if (this.#tamanho < 0) {
-            return undefined
+        return -1
+    }
+
+    mostrarItems(){
+        for(let i = 0; i < this.#tamanho; i++){
+
+            console.log(this.#items[i]);
         }
     }
-  */  
 }
 
 module.exports = MeuArray;
